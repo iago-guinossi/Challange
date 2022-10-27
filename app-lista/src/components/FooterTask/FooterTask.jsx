@@ -3,7 +3,7 @@ import { useTask } from "../../context/taskContext";
 import { useView } from "../../context/viewContext";
 import './FooterTask.css'
 
-function FooterTask() {
+export function FooterTask() {
   const [message, setMessage] = useTask();
   const [view, setView] = useView();
   const [count, setCount] = React.useState(0);
@@ -34,4 +34,4 @@ function FooterTask() {
     </div>
   );
 }
-export { FooterTask };
+
