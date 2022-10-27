@@ -4,7 +4,8 @@ import { TaskProvider } from "../context/taskContext";
 import { ViewProvider } from "../context/viewContext";
 import { NewTask } from "../components/NewTask";
 import { Task } from "../components/Task";
-import { FooterTask } from "../components/FooterTask";
+import { FooterTask } from "../components/FooterTask/FooterTask";
+
 function App() {
   return (
     <TaskProvider>

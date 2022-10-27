@@ -1,12 +1,11 @@
 import React from "react";
-import { useTask } from "../context/taskContext";
-import { useView } from "../context/viewContext";
-import styles from '../styles/FooterTask.module.css'
+import { useTask } from "../../context/taskContext";
+import { useView } from "../../context/viewContext";
+import './FooterTask.css'
 
 function FooterTask() {
   const [message, setMessage] = useTask();
   const [view, setView] = useView();
-
   const [count, setCount] = React.useState(0);
 
   const removeAllDone = () => {
@@ -22,13 +21,14 @@ function FooterTask() {
       return {};
     });
   }, [message]);
+
   return (
-    <div className={styles.foot}>
+    <div className='foot'>
       {count} items left
-      <div className={styles.button}>
-      <button className={view == 'all' ? styles.blue : null} onClick={() => setView("all")}>All</button>
-      <button className={view == 'act' ? styles.blue : null} onClick={() => setView("act")}>Active</button>
-      <button className={view == 'com' ? styles.blue : null} onClick={() => setView("com")}>Completed</button>
+      <div className='button'>
+      <button className={view == 'all' ? 'blue' : null} onClick={() => setView("all")}>All</button>
+      <button className={view == 'act' ? 'blue' : null} onClick={() => setView("act")}>Active</button>
+      <button className={view == 'com' ? 'blue' : null} onClick={() => setView("com")}>Completed</button>
       </div>
       <button onClick={() => removeAllDone()}>Clear Completed</button>
     </div>
