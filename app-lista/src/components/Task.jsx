@@ -1,8 +1,9 @@
 import React from "react";
 import { useTask } from "../context/taskContext";
 import { useView } from "../context/viewContext";
+import styles from '../styles/Task.module.css'
 
-function RenderTask() {
+function Task() {
   const [message, setMessage] = useTask();
   const [view] = useView();
   const cheked = (id) => {
@@ -16,22 +17,18 @@ function RenderTask() {
   };
   function renderAllTask(message) {
     return (
-      <tr key={message.id}>
-        <td>
+      <div key={message.id} className={styles.todoo}>
           <input
             type="checkbox"
             defaultChecked={message.done}
             onClick={() => cheked(message.id)}
-          />
-        </td>
-        <td>{message.nameToDo}</td>
-      </tr>
+          />{message.nameToDo}
+      </div>
     );
   }
 
   return (
-    <table>
-      <tbody>
+    <div className={styles.tabela}>
         {message.map((message) => {
           if (view === "all") {
             return renderAllTask(message);
@@ -41,8 +38,7 @@ function RenderTask() {
             return message.done ? renderAllTask(message) : null;
           }
         })}
-      </tbody>
-    </table>
+    </div>
   );
 }
-export { RenderTask };
+export { Task };

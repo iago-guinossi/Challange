@@ -3,15 +3,15 @@ import React from "react";
 import { TaskProvider } from "../context/taskContext";
 import { ViewProvider } from "../context/viewContext";
 import { NewTask } from "../components/NewTask";
-import { RenderTask } from "../components/RenderTask";
-import { RenderFooterTask } from "../components/RenderFooterTask";
+import { Task } from "../components/Task";
+import { FooterTask } from "../components/FooterTask";
 function App() {
   return (
     <TaskProvider>
       <NewTask />
-      <ViewProvider>
-        <RenderTask />
-        <RenderFooterTask />
+      <ViewProvider className='box'>
+        <Task />
+        <FooterTask />
       </ViewProvider>
     </TaskProvider>
   );

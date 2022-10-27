@@ -1,10 +1,11 @@
 import React from "react";
 import { useTask } from "../context/taskContext";
 import { useView } from "../context/viewContext";
+import styles from '../styles/FooterTask.module.css'
 
-function RenderFooterTask() {
+function FooterTask() {
   const [message, setMessage] = useTask();
-  const [, setView] = useView();
+  const [view, setView] = useView();
 
   const [count, setCount] = React.useState(0);
 
@@ -22,13 +23,15 @@ function RenderFooterTask() {
     });
   }, [message]);
   return (
-    <div>
+    <div className={styles.foot}>
       {count} items left
-      <button onClick={() => setView("all")}>All</button>
-      <button onClick={() => setView("act")}>Active</button>
-      <button onClick={() => setView("com")}>Completed</button>
+      <div className={styles.button}>
+      <button className={view == 'all' ? styles.blue : null} onClick={() => setView("all")}>All</button>
+      <button className={view == 'act' ? styles.blue : null} onClick={() => setView("act")}>Active</button>
+      <button className={view == 'com' ? styles.blue : null} onClick={() => setView("com")}>Completed</button>
+      </div>
       <button onClick={() => removeAllDone()}>Clear Completed</button>
     </div>
   );
 }
-export { RenderFooterTask };
+export { FooterTask };

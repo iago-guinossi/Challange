@@ -10,10 +10,10 @@ function useView() {
     return context
   }
 
-function ViewProvider({children}){
+function ViewProvider({children}, ...props){
     const [state, setState] = React.useState('all')
     const value = [state, setState]
-    return <ViewContext.Provider value={value}>{children}</ViewContext.Provider>
+    return <ViewContext.Provider value={value} {...props}>{children}</ViewContext.Provider>
 }
 
 export {useView, ViewProvider}

@@ -1,3 +1,4 @@
+import styles from '../styles/NewTask.module.css'
 import React from "react";
 import { useTask } from "../context/taskContext";
 
@@ -24,11 +25,12 @@ function NewTask() {
   return (
     <form onSubmit={handleSubmit}>
       {name ? (
-        <button type="submit" />
+        <button type="submit"><input type='checkbox'/></button>
       ) : (
         <input type="checkbox" disabled={true} />
       )}
       <input
+      className={styles.newtodo}
         value={name}
         onChange={handleChange}
         id="name"
