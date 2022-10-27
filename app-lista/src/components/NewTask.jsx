@@ -25,9 +25,9 @@ function NewTask() {
   return (
     <form onSubmit={handleSubmit}>
       {name ? (
-        <button type="submit"></button>
+        <button type="submit" className={styles.butSub1}/>
       ) : (
-        <input type="checkbox" disabled={true} />
+        <button type="submit" className={styles.butSub} disabled={true} />
       )}
       <input
       className={styles.newtodo}

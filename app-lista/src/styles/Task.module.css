@@ -21,3 +21,28 @@
     width: 500px;
     overflow: hidden;
 }
+
+.butCheck{
+        margin: 0 5px;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 28px;
+        width: 28px;
+}
+
+.checkMark{
+    margin: 0 5px;
+    height: 28px;
+    width: 28px;
+    border-radius: 30px;
+    border: solid 1px;
+}
+
+.butCheck:hover  ~ .checkMark {
+    background-color: #ccc;
+}
+
+.butCheck:checked ~ .checkMark{
+    background-image: url(../assets/imgs/icon-check.svg)
+}

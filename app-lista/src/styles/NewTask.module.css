@@ -1,11 +1,13 @@
 form {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     background-color: hsl(233, 14%, 35%);
     border-radius: 5px;
     height: 40px;
     margin-bottom: 20px;
     width: 500px;
+
 }
 
 .newtodo{
@@ -16,5 +18,25 @@ form {
     border: 0;
     color: hsl(234, 39%, 85%);
     outline:none;
+}
+
+.butSub1{
+    margin: 0 5px;
+    height: 28px;
+    width: 28px;
+    border-radius: 30px;
+    border: solid 1px;
+}
+
+.butSub1:hover{
+    background-color: gray;
+}
+
+.butSub{
+    margin: 0 5px;
+    height: 28px;
+    width: 28px;
+    border-radius: 30px;
+    border: solid 1px;
 }
 

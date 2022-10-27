@@ -22,7 +22,8 @@ function Task() {
             type="checkbox"
             defaultChecked={message.done}
             onClick={() => cheked(message.id)}
-          />{message.nameToDo}
+            className={styles.butCheck}
+          /><span className={styles.checkMark}></span>{message.nameToDo}
       </div>
     );
   }
