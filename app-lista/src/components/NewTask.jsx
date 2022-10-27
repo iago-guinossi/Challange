@@ -1,5 +1,5 @@
 import React from "react";
-import { useTask } from "./context/taskContext";
+import { useTask } from "../context/taskContext";
 
 function NewTask() {
   const [message, setMessage] = useTask();
