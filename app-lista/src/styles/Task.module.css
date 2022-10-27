@@ -8,7 +8,7 @@
     border-radius: 5px 5px 0 0;
     height: 500px;
     flex-wrap: wrap;
-    width: 500px;
+    width: 600px;
 }
 
 .todoo{
@@ -18,7 +18,7 @@
     height: 40px;
     border-bottom: 1px solid white;
     font-size: 25px;
-    width: 500px;
+    width: 600px;
     overflow: hidden;
 }
 

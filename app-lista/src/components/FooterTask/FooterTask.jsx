@@ -24,13 +24,15 @@ export function FooterTask() {
 
   return (
     <div className='foot'>
-      {count} items left
-      <div className='button'>
-      <button className={view == 'all' ? 'blue' : null} onClick={() => setView("all")}>All</button>
-      <button className={view == 'act' ? 'blue' : null} onClick={() => setView("act")}>Active</button>
-      <button className={view == 'com' ? 'blue' : null} onClick={() => setView("com")}>Completed</button>
+      <span>{count} items left</span>
+      
+      <div className='filter-actions'>
+        <button className={`button ${view == 'all' ? 'blue' : ''}`} onClick={() => setView("all")}>All</button>
+        <button className={`button ${view == 'act' ? 'blue' : ''}`} onClick={() => setView("act")}>Active</button>
+        <button className={`button ${view == 'com' ? 'blue' : ''}`} onClick={() => setView("com")}>Completed</button>
       </div>
-      <button onClick={() => removeAllDone()}>Clear Completed</button>
+
+      <button className="button" onClick={() => removeAllDone()}>Clear Completed</button>
     </div>
   );
 }
