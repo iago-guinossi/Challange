@@ -11,7 +11,7 @@ function useTask() {
   }
 
 function TaskProvider({children}){
-    const [state, setState] = React.useState()
+    const [state, setState] = React.useState([])
     const value = [state, setState]
     return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>
 }

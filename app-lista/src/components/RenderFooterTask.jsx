@@ -4,7 +4,7 @@ import { useView } from "../context/viewContext";
 
 function RenderFooterTask() {
   const [message, setMessage] = useTask();
-  const [view, setView] = useView();
+  const [, setView] = useView();
 
   const [count, setCount] = React.useState(0);
 
@@ -23,7 +23,7 @@ function RenderFooterTask() {
   }, [message]);
   return (
     <div>
-      <div>{count} items left</div>
+      {count} items left
       <button onClick={() => setView("all")}>All</button>
       <button onClick={() => setView("act")}>Active</button>
       <button onClick={() => setView("com")}>Completed</button>
