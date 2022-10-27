@@ -25,7 +25,7 @@ function NewTask() {
   return (
     <form onSubmit={handleSubmit}>
       {name ? (
-        <button type="submit"><input type='checkbox'/></button>
+        <button type="submit"></button>
       ) : (
         <input type="checkbox" disabled={true} />
       )}
