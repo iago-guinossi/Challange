@@ -24,11 +24,6 @@ export function NewTask() {
 
   return (
     <form onSubmit={handleSubmit}>
-      {name ? (
-        <button type="submit" className='butSub1'/>
-      ) : (
-        <button type="submit" className='butSub' disabled={true} />
-      )}
       <input
       className='newtodo'
         value={name}
