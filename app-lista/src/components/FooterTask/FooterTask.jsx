@@ -12,6 +12,8 @@ export function FooterTask() {
     setMessage(message.filter((message) => !message.done));
   };
 
+  const size = React.usewindow
+
   React.useEffect(() => {
     setCount(0);
     message.map((message) => {
@@ -26,11 +28,11 @@ export function FooterTask() {
     <div className='foot'>
       <span>{count} items left</span>
       
-      <div className='filter-actions'>
+      {/* {isMobbile ? <div className='filter-actions'>
         <button className={`butto ${view === 'all' ? 'blue' : ''}`} onClick={() => setView("all")}>All</button>
         <button className={`butto ${view === 'act' ? 'blue' : ''}`} onClick={() => setView("act")}>Active</button>
         <button className={`butto ${view === 'com' ? 'blue' : ''}`} onClick={() => setView("com")}>Completed</button>
-      </div>
+      </div> : null} */}
 
       <button className="butto" onClick={() => removeAllDone()}>Clear Completed</button>
     </div>
