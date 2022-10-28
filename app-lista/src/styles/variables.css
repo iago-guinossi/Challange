@@ -1,5 +1,13 @@
 :root {
     --base-width: 600px;
     --base-background: hsl(235, 24%, 19%);
+    --background-color-dark: hsl(235, 21%, 11%);
     --base-gradient: linear-gradient(to right ,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    --color-border: hsl(235deg 16% 29%);
+    --color-disable:hsl(234deg 12% 48%);
+    --color-task: hsl(234, 39%, 85%);
+    --font-size-lg: 41px;
+    --font-size-md: 21px;
+    --font-size-sm: 15px;
+    --font-size-xs: 21px;
 }
