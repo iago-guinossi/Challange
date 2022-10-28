@@ -1,7 +1,7 @@
 import React from "react";
 import { useTask } from "../../context/taskContext";
 import { useView } from "../../context/viewContext";
-import './Task.css'
+import "./Task.css";
 
 export function Task() {
   const [message, setMessage] = useTask();
@@ -17,28 +17,28 @@ export function Task() {
   };
   function renderAllTask(message) {
     return (
-      <div key={message.id} className='todo'>
-          <input
-            type="checkbox"
-            defaultChecked={message.done}
-            onClick={() => cheked(message.id)}
-            className='butCheck'
-          /><span className='checkMark'></span>{message.nameToDo}
+      <div key={message.id} className="todo">
+        <button
+          type="checkbox"
+          onClick={() => cheked(message.id)}
+          className={`checkMark ${message.done ? "check" : ""}`}
+        />
+        <span>{message.nameToDo}</span>
       </div>
     );
   }
 
   return (
-    <div className='tabela'>
-        {message.map((message) => {
-          if (view === "all") {
-            return renderAllTask(message);
-          } else if (view === "act") {
-            return !message.done ? renderAllTask(message) : null;
-          } else {
-            return message.done ? renderAllTask(message) : null;
-          }
-        })}
+    <div className="tabela">
+      {message.map((message) => {
+        if (view === "all") {
+          return renderAllTask(message);
+        } else if (view === "act") {
+          return !message.done ? renderAllTask(message) : null;
+        } else {
+          return message.done ? renderAllTask(message) : null;
+        }
+      })}
     </div>
   );
 }
