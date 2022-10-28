@@ -23,7 +23,7 @@ export function Task() {
           onClick={() => cheked(message.id)}
           className={`checkMark ${message.done ? "check" : ""}`}
         />
-        <span>{message.nameToDo}</span>
+        <span className="nameTodo">{message.nameToDo}</span>
       </div>
     );
   }
