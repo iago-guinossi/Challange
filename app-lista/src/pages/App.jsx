@@ -1,4 +1,4 @@
-// import '../styles/globals.css';
+import '../styles/globals.css';
 import React from "react";
 import { TaskProvider } from "../context/taskContext";
 import { ViewProvider } from "../context/viewContext";
@@ -10,7 +10,7 @@ function App() {
   return (
     <TaskProvider>
       <NewTask />
-      <ViewProvider className='box'>
+      <ViewProvider>
         <Task />
         <FooterTask />
       </ViewProvider>
