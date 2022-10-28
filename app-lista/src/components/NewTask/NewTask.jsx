@@ -34,7 +34,7 @@ export function NewTask() {
         value={name}
         onChange={handleChange}
         id="name"
-        placeholder="New Task..."
+        placeholder="Create a new todo..."
       />
     </form>
   );
