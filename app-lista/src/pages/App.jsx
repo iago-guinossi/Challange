@@ -1,4 +1,3 @@
-import '../styles/globals.css';
 import React from "react";
 import { TaskProvider } from "../context/taskContext";
 import { ViewProvider } from "../context/viewContext";
@@ -8,13 +7,16 @@ import { FooterTask } from "../components/FooterTask/FooterTask";
 
 function App() {
   return (
+    <div className="container">
     <TaskProvider>
+      <div className='header'>TODO</div>
       <NewTask />
       <ViewProvider>
         <Task />
         <FooterTask />
       </ViewProvider>
     </TaskProvider>
+    </div>
   );
 }
 
