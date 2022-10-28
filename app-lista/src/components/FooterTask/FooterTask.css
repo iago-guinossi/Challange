@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: hsl(233, 14%, 35%);
+    background-color: var(--base-background);
     border-radius: 0 0 5px 5px;
     color: hsl(236, 9%, 61%);
     width: var(--base-width);
@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.button{
+.butto{
     font-family: Josefin Sans;
     font-size: 14px;
     background-color: rgba(0,0,0,0);
