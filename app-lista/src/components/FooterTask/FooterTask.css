@@ -5,24 +5,25 @@
     flex-direction: row;
     background-color: var(--base-background);
     border-radius: 0 0 5px 5px;
-    color: hsl(236, 9%, 61%);
-    width: var(--base-width);
+    color: var(--color-disable);
+    max-width: var(--base-width);
+    width: 100%;
     height: 54px;
-    border-top: 1px solid hsl(236, 9%, 61%);
+    border-top: 1px solid var(--color-border);
     padding: 0 24px;
     box-sizing: border-box;
+    font-size: var(--font-size-sm);
 }
 
 .butto{
-    font-family: Josefin Sans;
-    font-size: 14px;
+    font-family: 'Josefin Sans';
     background-color: rgba(0,0,0,0);
     border: 0;
-    color: hsl(236, 9%, 61%);
+    color: var(--color-disable);
     cursor: pointer;
 }
 
-.button:hover{
+.butto:hover{
     color:hsl(233, 11%, 84%);
 }
 
