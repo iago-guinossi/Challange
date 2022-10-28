@@ -2,7 +2,7 @@ import styles from '../styles/NewTask.module.css'
 import React from "react";
 import { useTask } from "../context/taskContext";
 
-function NewTask() {
+export function NewTask() {
   const [message, setMessage] = useTask();
   const newMessage = (name) => {
     setMessage([
@@ -39,5 +39,3 @@ function NewTask() {
     </form>
   );
 }
-
-export { NewTask };

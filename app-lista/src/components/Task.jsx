@@ -3,7 +3,7 @@ import { useTask } from "../context/taskContext";
 import { useView } from "../context/viewContext";
 import styles from '../styles/Task.module.css'
 
-function Task() {
+export function Task() {
   const [message, setMessage] = useTask();
   const [view] = useView();
   const cheked = (id) => {
@@ -42,4 +42,3 @@ function Task() {
     </div>
   );
 }
-export { Task };
