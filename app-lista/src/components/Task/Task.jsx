@@ -17,7 +17,7 @@ export function Task() {
   };
   function renderAllTask(message) {
     return (
-      <div key={message.id} className='todoo'>
+      <div key={message.id} className='todo'>
           <input
             type="checkbox"
             defaultChecked={message.done}
