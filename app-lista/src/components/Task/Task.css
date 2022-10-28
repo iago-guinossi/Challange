@@ -1,51 +1,53 @@
-.tabela{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    background-color: var(--base-background);
-    color: hsl(234, 39%, 85%);
-    border-radius: 5px 5px 0 0;
-    height: 390px;
-    flex-wrap: wrap;
-    width: var(--base-width);
+.tabela {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background-color: var(--base-background);
+  color: hsl(234, 39%, 85%);
+  border-radius: 5px 5px 0 0;
+  height: 390px;
+  flex-wrap: wrap;
+  width: var(--base-width);
 }
 
-.todo{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 65px;
-    border-bottom: 1px solid white;
-    font-size: 25px;
-    width: var(--base-width);
-    overflow: hidden;
+.todo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 65px;
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  width: var(--base-width);
+  overflow: hidden;
 }
 
-.butCheck{
-    margin: 0 24px;
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 28px;
-        width: 28px;
+.butCheck {
+  margin: 0 24px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
 }
 
-.checkMark{
-    margin: 0 24px;
-    height: 28px;
-    width: 28px;
-    border-radius: 30px;
-    border: solid 1px;
+.checkMark {
+  box-sizing: border-box;
+  margin: 0 24px;
+  height: 25px;
+  width: 25px;
+  border-radius: 30px;
+  border: solid 1px;
 }
 
-.butCheck:hover  ~ .checkMark {
-
-  border-image-slice: 10;
-  border-image-source: var(--base-gradient);
-  /* border-radius: 30px; */
+.butCheck:hover ~ .checkMark {
+  background: var(--base-gradient);
+  border: none;
 }
 
-.butCheck:checked ~ .checkMark{
-    background-image: url(../../assets/imgs/icon-check.svg);
+.butCheck:checked ~ .checkMark {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../assets/imgs/icon-check.svg), var(--base-gradient);
+  border: none;
 }
