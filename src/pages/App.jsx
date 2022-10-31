@@ -11,19 +11,24 @@ import { FooterTask } from "../components/FooterTask/FooterTask";
 function App() {
   return (
     <SizeProvider>
-    <ThemeProvider>
-    <div className="container">
-    <TaskProvider>
-      <Header/>
-      <NewTask />
-      <ViewProvider>
-        <Task />
-        <FooterTask />
-      </ViewProvider>
-    </TaskProvider>
-    <a href="https://github.com/iago-guinossi/Challange" className="textoBase">Desenvolvido por Iago Guinossi 2022.</a>
-    </div>
-    </ThemeProvider>
+      <ThemeProvider>
+        <div className="container">
+          <TaskProvider>
+            <Header />
+            <NewTask />
+            <ViewProvider>
+              <Task />
+              <FooterTask />
+            </ViewProvider>
+          </TaskProvider>
+          <a
+            href="https://github.com/iago-guinossi/Challange"
+            className="textoBase"
+          >
+            Desenvolvido por Iago Guinossi 2022.
+          </a>
+        </div>
+      </ThemeProvider>
     </SizeProvider>
   );
 }
