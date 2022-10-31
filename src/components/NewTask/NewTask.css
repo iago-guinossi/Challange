@@ -13,9 +13,10 @@ form {
   border-radius: 5px;
   font-family: "Josefin Sans";
   font-size: var(--font-size-md);
-  border: none;
   color: var(--color-task);
   outline: none;
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
 }
 
 .newtodo::placeholder {
