@@ -11,6 +11,8 @@
   max-width: var(--base-width);
   width: 100%;
   overflow: auto;
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
 }
 
 .todo {
