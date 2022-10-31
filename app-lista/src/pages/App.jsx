@@ -10,8 +10,8 @@ import { FooterTask } from "../components/FooterTask/FooterTask";
 
 function App() {
   return (
-    <ThemeProvider>
     <SizeProvider>
+    <ThemeProvider>
     <div className="container">
     <TaskProvider>
       <Header/>
@@ -22,8 +22,8 @@ function App() {
       </ViewProvider>
     </TaskProvider>
     </div>
-    </SizeProvider>
     </ThemeProvider>
+    </SizeProvider>
   );
 }
 
