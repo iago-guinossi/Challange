@@ -1,4 +1,4 @@
-import './NewTask.css'
+import "./NewTask.css";
 import React from "react";
 import { useTask } from "../../context/taskContext";
 
@@ -18,6 +18,9 @@ export function NewTask() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!name) {
+      return;
+    }
     newMessage(name);
     setName("");
   }
@@ -25,7 +28,7 @@ export function NewTask() {
   return (
     <form onSubmit={handleSubmit}>
       <input
-      className='newtodo'
+        className="newtodo"
         value={name}
         onChange={handleChange}
         id="name"
