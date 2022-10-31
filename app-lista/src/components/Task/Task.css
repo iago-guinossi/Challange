@@ -1,6 +1,5 @@
 .tabela {
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
   background-color: var(--base-background);
@@ -8,7 +7,6 @@
   border-radius: 5px 5px 0 0;
   height: 390px;
   flex-wrap: wrap;
-  max-width: var(--base-width);
   width: 100%;
   overflow: auto;
   border: 1px solid var(--color-border);
@@ -18,13 +16,12 @@
 .todo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   /* flex-wrap: wrap; */
   /* flex-direction: column; */
   min-height: 65px;
   border-bottom: 1px solid var(--color-border);
   font-size: var(--font-size-md);
-  max-width: var(--base-width);
   width: 100%;
   padding: 10px 24px;
   gap: 12px;
@@ -46,8 +43,25 @@
 }
 
 .checkMark:hover {
-  /* background: var(--base-gradient); */
-  border: solid 1px var(--base-gradient);
+  background: linear-gradient(to right ,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgba(255,255,255,0.9);
+  cursor: pointer;
+}
+
+.checkMark:hover:before {
+  border-radius: 100%;
+  display:block;
+  content: "";
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: var(--base-background);
+  position: absolute;
+  top:2px;
+  left:2px;
 }
 
 .check {
@@ -59,4 +73,24 @@
 
 .nameTodo{
     padding: 11px 0 5px 0;
+    flex-grow: 1;
+}
+
+.todoDone{
+  text-decoration: line-through;
+  color: var(--color-disable);
+}
+
+.removeButton{
+  background-image: url(../../assets/imgs/icon-cross.svg);
+  flex-basis: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
