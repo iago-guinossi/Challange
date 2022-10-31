@@ -11,7 +11,7 @@ export function useTask() {
   }
 
 export function TaskProvider({children}){
-    const [state, setState] = React.useState([])
+    const [state, setState] = React.useState(() => JSON.parse(window.localStorage.getItem('message') || []))
     const value = [state, setState]
     return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>
 }
