@@ -6,6 +6,9 @@ import "./Task.css";
 export function Task() {
   const [message, setMessage] = useTask();
   const [view] = useView();
+  React.useEffect(() => {
+    window.localStorage.setItem('message', JSON.stringify(message))
+  }, [message])
   const cheked = (id) => {
     const changeDone = message.map((message) => {
       if (message.id === id) {
@@ -14,7 +17,10 @@ export function Task() {
       return message;
     });
     setMessage(changeDone);
-  };
+  }
+  const removeTodo = (id) => {
+    setMessage(message.filter((message) => message.id !== id))
+  }
   function renderAllTask(message) {
     return (
       <div key={message.id} className="todo">
@@ -23,7 +29,8 @@ export function Task() {
           onClick={() => cheked(message.id)}
           className={`checkMark ${message.done ? "check" : ""}`}
         />
-        <span className="nameTodo">{message.nameToDo}</span>
+        <span className={`nameTodo ${message.done ? 'todoDone' : ''}`}>{message.nameToDo}</span>
+        <button className="removeButton" onClick={()=>removeTodo(message.id)}/>
       </div>
     );
   }
