@@ -1,0 +1,32 @@
+.header-todo {
+  color: hsl(234, 39%, 85%);
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+  letter-spacing: 10px;
+  margin-bottom: 35px;
+}
+
+.dark {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../assets/imgs/icon-moon.svg), none;
+  height: 35px;
+  width: 35px;
+  background-color: none;
+
+}
+
+.light {
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-image: url(../../assets/imgs/icon-sun.svg);
+  height: 35px;
+  width: 35px;
+  color: none;
+}
+
+.header-container{
+   display: flex;
+   justify-content: space-between;
+}
