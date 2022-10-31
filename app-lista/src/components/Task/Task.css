@@ -40,16 +40,34 @@
   border: solid 1px;
   border-color: gray;
   background-color: var(--base-background);
+  cursor: pointer;
+}
+.checkMarkAfter {
+  flex-basis: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+  /* margin: 0 24px; */
+  height: 25px;
+  width: 25px;
+  border-radius: 30px;
+  border: solid 1px;
+  border-color: gray;
+  background-color: var(--base-background);
+  cursor: pointer;
+}
+
+.checkMarkAfter:hover{
+  box-shadow: 0 0 5px rgba(255,255,255,0.9);
 }
 
 .checkMark:hover {
-  background: linear-gradient(to right ,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  background: var(--base-gradient);
   width: 25px;
   height: 25px;
   position: relative;
   border-radius: 100%;
   box-shadow: 0 0 5px rgba(255,255,255,0.9);
-  cursor: pointer;
 }
 
 .checkMark:hover:before {

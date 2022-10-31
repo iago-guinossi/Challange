@@ -27,7 +27,7 @@ export function Task() {
         <button
           type="checkbox"
           onClick={() => cheked(message.id)}
-          className={`checkMark ${message.done ? "check" : ""}`}
+          className={`${message.done ? "check checkMarkAfter" : "checkMark"}`}
         />
         <span className={`nameTodo ${message.done ? 'todoDone' : ''}`}>{message.nameToDo}</span>
         <button className="removeButton" onClick={()=>removeTodo(message.id)}/>
