@@ -70,5 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### TODO
-1- change border-color to gradient
+1- ajust background -
+2- aplicar efeito no done -
+3- Colocar excluir todo -
+4- retirar background dos botoes de tema -
+5- salvar no localstorage -
+6- subir no githubpages
+7- atualizar ReadMe
+8 colocar referencia ao FrontMentor
 
