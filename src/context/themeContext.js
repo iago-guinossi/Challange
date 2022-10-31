@@ -11,7 +11,7 @@ export function useTheme() {
   }
 
 export function ThemeProvider({children}){
-    const [state, setState] = React.useState([])
+    const [state, setState] = React.useState(window.localStorage.getItem('theme') || "dark")
     const value = [state, setState]
     return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
