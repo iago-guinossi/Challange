@@ -22,7 +22,7 @@ function App() {
             </ViewProvider>
           </TaskProvider>
           <a
-            href="https://github.com/iago-guinossi/Challange"
+            href="https://github.com/iago-guinossi/todo-app"
             className="textoBase"
           >
             Desenvolvido por Iago Guinossi 2022.

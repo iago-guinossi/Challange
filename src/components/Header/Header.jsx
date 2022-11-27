@@ -2,7 +2,11 @@ import React from "react";
 import "./Header.css";
 import { useTheme } from "../../context/themeContext";
 import { useIsMobile } from "../../hooks/useIsMobile";
-
+import bgDesktopDark from '../../assets/imgs/bg-desktop-dark.jpg'
+import bgDesktopLight from '../../assets/imgs/bg-desktop-light.jpg'
+import bgMobileDark from '../../assets/imgs/bg-mobile-dark.jpg'
+import bgMobileLight from '../../assets/imgs/bg-mobile-light.jpg'
+ 
 export function Header() {
   const isMobile = useIsMobile();
   const [theme, setTheme] = useTheme();
@@ -53,7 +57,7 @@ export function Header() {
         --color-task: hsl(234, 39%, 85%);
         --base-background: hsl(235, 24%, 19%);
         --background-color-dark: hsl(235, 21%, 11%);
-        --background-image: url(bg-desktop-dark.jpg);
+        --background-image: url(${bgDesktopDark});
       }
     `;
   }
@@ -66,7 +70,7 @@ export function Header() {
         --color-task: hsl(234, 39%, 85%);
         --base-background: hsl(235, 24%, 19%);
         --background-color-dark: hsl(235, 21%, 11%);
-        --background-image: url(bg-mobile-dark.jpg);
+        --background-image: url(${bgDesktopLight});
     }`;
   }
   function defineLight() {
@@ -78,7 +82,7 @@ export function Header() {
         --color-task: hsl(235, 19%, 35%);
         --base-background: hsl(0deg 0% 100%);
         --background-color-dark: hsl(0deg 0% 98%);
-        --background-image: url(bg-desktop-light.jpg);
+        --background-image: url(${bgMobileDark});
     }`;
   }
   function defineLightMobile() {
@@ -90,7 +94,7 @@ export function Header() {
         --color-task: hsl(235, 19%, 35%);
         --base-background: hsl(0deg 0% 100%);
         --background-color-dark: hsl(0deg 0% 98%);
-        --background-image: url(bg-mobile-light.jpg);
+        --background-image: url(${bgMobileLight});
     }`;
   }
 
