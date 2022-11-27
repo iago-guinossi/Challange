@@ -70,7 +70,7 @@ export function Header() {
         --color-task: hsl(234, 39%, 85%);
         --base-background: hsl(235, 24%, 19%);
         --background-color-dark: hsl(235, 21%, 11%);
-        --background-image: url(${bgDesktopLight});
+        --background-image: url(${bgMobileDark});
     }`;
   }
   function defineLight() {
@@ -82,7 +82,7 @@ export function Header() {
         --color-task: hsl(235, 19%, 35%);
         --base-background: hsl(0deg 0% 100%);
         --background-color-dark: hsl(0deg 0% 98%);
-        --background-image: url(${bgMobileDark});
+        --background-image: url(${bgDesktopLight});
     }`;
   }
   function defineLightMobile() {
